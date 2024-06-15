@@ -22,9 +22,10 @@ Then the table has one row in it for Hugh Jackman at Australian National Univers
 
 Write the full Python code to do this.
 
-- Assume each JSON is in a folder with path `./April 2024 Public Data File from Crossref`.
-- Use the `gzip` module to open the JSON files without extracting them to a local file.
+- Assume each JSON is in a folder with path `./[Sample Dataset] April 2024 Public Data File from Crossref`.
+- Use `gzip` to open the JSON files without extracting them to a local file.
 - Define a list of target institutions. Consider an affiliation name to match if it contains any of the target institutions.
+- Remove academics with score 0.
 
 ```json
 {
