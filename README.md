@@ -26,6 +26,7 @@ Write the full Python code to do this.
 - Use `gzip` to open the JSON files without extracting them to a local file.
 - Define a list of target institutions. Consider an affiliation name to match if it contains any of the target institutions.
 - Remove academics with score 0.
+- Read target institutions from a file called `target_institutions.txt` which is a newline-separated list.
 
 ```json
 {

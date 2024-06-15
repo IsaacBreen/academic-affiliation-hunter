@@ -7,8 +7,8 @@ import pandas as pd
 
 # Define the path to the JSON files and the target institutions
 data_path = './[Sample Dataset] April 2024 Public Data File from Crossref'
-target_institutions = {"Carnegie Mellon University", "Massachusetts Institute of Technology", "Stanford University",
-                       "University of California, Berkeley"}
+with open('target_institutions.txt', 'r') as f:
+    target_institutions = f.read().splitlines()
 
 # Initialize a dictionary to keep track of Australian academics and their scores
 academic_scores = defaultdict(lambda: {'affiliation': '', 'score': 0})
