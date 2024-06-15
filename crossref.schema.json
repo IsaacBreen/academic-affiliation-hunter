@@ -1,0 +1,243 @@
+{
+  "$schema": "http://json-schema.org/schema#", "type": "object", "properties": {
+  "items": {
+    "type": "array", "items": {
+      "type": "object",
+      "properties": {
+        "DOI": {"type": "string"},
+        "reference": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "author": {"type": "string"},
+              "year": {"type": "string"},
+              "key": {"type": "string"},
+              "volume-title": {"type": "string"},
+              "first-page": {"type": "string"},
+              "volume": {"type": "string"},
+              "journal-title": {"type": "string"},
+              "DOI": {"type": "string"},
+              "doi-asserted-by": {"type": "string"},
+              "unstructured": {"type": "string"},
+              "article-title": {"type": "string"},
+              "issue": {"type": "string"},
+              "series-title": {"type": "string"},
+              "ISSN": {"type": "string"},
+              "issn-type": {"type": "string"}
+            },
+            "required": ["key"]
+          }
+        },
+        "issued": {
+          "type": "object",
+          "properties": {"date-parts": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}}},
+          "required": ["date-parts"]
+        },
+        "prefix": {"type": "string"},
+        "author": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "affiliation": {
+                "type": "array",
+                "items": {"type": "object", "properties": {"name": {"type": "string"}}, "required": ["name"]}
+              },
+              "given": {"type": "string"},
+              "family": {"type": "string"},
+              "sequence": {"type": "string"}
+            },
+            "required": ["affiliation", "family", "given", "sequence"]
+          }
+        },
+        "reference-count": {"type": "integer"},
+        "ISSN": {"type": "array", "items": {"type": "string"}},
+        "member": {"type": "string"},
+        "source": {"type": "string"},
+        "score": {"type": "number"},
+        "deposited": {
+          "type": "object",
+          "properties": {
+            "timestamp": {"type": "integer"},
+            "date-time": {"type": "string"},
+            "date-parts": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}}
+          },
+          "required": ["date-parts", "date-time", "timestamp"]
+        },
+        "indexed": {
+          "type": "object",
+          "properties": {
+            "timestamp": {"type": "integer"},
+            "date-time": {"type": "string"},
+            "date-parts": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}}
+          },
+          "required": ["date-parts", "date-time", "timestamp"]
+        },
+        "issue": {"type": "string"},
+        "published-online": {
+          "type": "object",
+          "properties": {"date-parts": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}}},
+          "required": ["date-parts"]
+        },
+        "URL": {"type": "string"},
+        "is-referenced-by-count": {"type": "integer"},
+        "published": {
+          "type": "object",
+          "properties": {"date-parts": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}}},
+          "required": ["date-parts"]
+        },
+        "volume": {"type": "string"},
+        "issn-type": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {"type": {"type": "string"}, "value": {"type": "string"}},
+            "required": ["type", "value"]
+          }
+        },
+        "link": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "URL": {"type": "string"},
+              "intended-application": {"type": "string"},
+              "content-version": {"type": "string"},
+              "content-type": {"type": "string"}
+            },
+            "required": ["URL", "content-type", "content-version", "intended-application"]
+          }
+        },
+        "published-print": {
+          "type": "object",
+          "properties": {"date-parts": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}}},
+          "required": ["date-parts"]
+        },
+        "journal-issue": {
+          "type": "object",
+          "properties": {
+            "issue": {"type": "string"},
+            "published-print": {
+              "type": "object",
+              "properties": {"date-parts": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}}},
+              "required": ["date-parts"]
+            },
+            "published-online": {
+              "type": "object",
+              "properties": {"date-parts": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}}},
+              "required": ["date-parts"]
+            }
+          },
+          "required": ["issue"]
+        },
+        "references-count": {"type": "integer"},
+        "short-container-title": {"type": "array", "items": {"type": "string"}},
+        "publisher": {"type": "string"},
+        "content-domain": {
+          "type": "object",
+          "properties": {"domain": {"type": "array", "items": {"type": "string"}}, "crossmark-restriction": {"type": "boolean"}},
+          "required": ["crossmark-restriction", "domain"]
+        },
+        "resource": {
+          "type": "object",
+          "properties": {"primary": {"type": "object", "properties": {"URL": {"type": "string"}}, "required": ["URL"]}},
+          "required": ["primary"]
+        },
+        "language": {"type": "string"},
+        "created": {
+          "type": "object",
+          "properties": {
+            "timestamp": {"type": "integer"},
+            "date-time": {"type": "string"},
+            "date-parts": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}}
+          },
+          "required": ["date-parts", "date-time", "timestamp"]
+        },
+        "type": {"type": "string"},
+        "title": {"type": "array", "items": {"type": "string"}},
+        "alternative-id": {"type": "array", "items": {"type": "string"}},
+        "container-title": {"type": "array", "items": {"type": "string"}},
+        "page": {"type": "string"},
+        "abstract": {"type": "string"},
+        "license": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "delay-in-days": {"type": "integer"},
+              "start": {
+                "type": "object",
+                "properties": {
+                  "timestamp": {"type": "integer"},
+                  "date-time": {"type": "string"},
+                  "date-parts": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}}
+                },
+                "required": ["date-parts", "date-time", "timestamp"]
+              },
+              "content-version": {"type": "string"},
+              "URL": {"type": "string"}
+            },
+            "required": ["URL", "content-version", "delay-in-days", "start"]
+          }
+        },
+        "assertion": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {"type": "string"},
+              "group": {
+                "type": "object",
+                "properties": {"name": {"type": "string"}, "label": {"type": "string"}},
+                "required": ["label", "name"]
+              },
+              "order": {"type": "integer"},
+              "value": {"type": "string"},
+              "name": {"type": "string"}
+            },
+            "required": ["group", "label", "name", "order", "value"]
+          }
+        },
+        "update-policy": {"type": "string"},
+        "subtitle": {"type": "array", "items": {"type": "string"}},
+        "archive": {"type": "array", "items": {"type": "string"}},
+        "article-number": {"type": "string"},
+        "published-other": {
+          "type": "object",
+          "properties": {"date-parts": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}}},
+          "required": ["date-parts"]
+        }
+      },
+      "required": [
+        "DOI",
+        "ISSN",
+        "URL",
+        "author",
+        "container-title",
+        "content-domain",
+        "created",
+        "deposited",
+        "indexed",
+        "is-referenced-by-count",
+        "issn-type",
+        "issue",
+        "issued",
+        "journal-issue",
+        "member",
+        "prefix",
+        "published",
+        "publisher",
+        "reference-count",
+        "references-count",
+        "resource",
+        "score",
+        "source",
+        "title",
+        "type",
+        "volume"
+      ]
+    }
+  }
+}, "required": ["items"]
+}
